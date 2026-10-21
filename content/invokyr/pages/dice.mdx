@@ -1,0 +1,94 @@
+---
+title: "Invokyr Dice and Rolls"
+description: "How Invokyr dice roll: the shared movement die, one-use house dice, the 5-in-6 good face, chaos, curses, and what the shop will pay to burn one."
+h1: "Dice and rolls"
+section: "Tools"
+order: 3
+verifiedAgainst: "Eisenfang’s Steam guide, updated 19 Oct 2026, and Ludogram patches V0.44.7 and V0.44.9. Face effects are community reports."
+quickAnswer:
+  - "The game room has a movement die. One roll moves the shared token. The house also hides one-use dice in containers, drawers, and on tables."
+  - "Eisenfang’s rule of thumb: five faces do the intended thing, one face goes bad. If a die has no special bad face, the bad roll is general chaos: lightning, fireworks, a minor monster, or an explosion."
+  - "A Resurrect die in your inventory is consumed if you die, and it brings you back. A bad Resurrect roll spawns a Player Mimic instead."
+  - "The shop’s DiceBurner pays for unused dice you found, not dispenser dice. Most pay $35. Boom and Thread pay $70. Resurrect and Heal pay $100."
+sources:
+  - label: "Eisenfang — Invokyr Strategy Guide"
+    url: "https://steamcommunity.com/sharedfiles/filedetails/?id=3816039008"
+  - label: "Steam news"
+    url: "https://store.steampowered.com/news/app/3883570"
+related:
+  - href: "/monsters"
+    label: "Monsters"
+  - href: "/events"
+    label: "Events"
+  - href: "/items"
+    label: "Shop"
+banner: "/images/official/steam/ss-01.jpg"
+bannerAlt: "Official Steam screenshot, a close-up of a red six-sided die with white pips"
+---
+
+import Callout from '@framework/components/Callout.astro';
+
+Steam’s store text says some dice heal, hide, or hinder the things hunting you, and that nothing is free of risk. The table is the community transcription of that risk.
+
+![A red die](/images/official/steam/ss-01.jpg)
+
+## Two kinds of roll
+
+**Movement.** Someone rolls in the game room. The token advances. The board may show a rhyme, rearrange rooms, and add a curse if a purple curse face lands up. Curses last until the next movement phase. The three curses written up in the guide are Flashlight Disabled, Reduced Maximum Health (cap 20), and Shared Damage & Healing. Patch V0.44.7 also names a Near Death curse: players under it no longer drop their items. The patch does not define the rest of Near Death.
+
+**House dice.** Found, thrown once, gone. Dispensers are the exception: they spit out another die of the type on the device as soon as the last one is activated. In the manor those are most often Cocoon dispensers and what the guide’s dispenser paragraph still calls Scanner dispensers.
+
+<Callout kind="note" title="Echo, or Scanner">
+The dice section of the 19 Oct guide names an Echo die: a radar pulse that paints idols, players, and monsters green through walls. The dispenser paragraph in the same guide still says “Scanner Die.” This page uses Echo for the effect and does not know if Scanner is an old name or a second item.
+</Callout>
+
+## Good face, bad face
+
+Where the guide does not describe a bad face, it says to assume general chaos.
+
+| Die | Good roll | Bad roll |
+| --- | --- | --- |
+| Anti-Gravity | A large blue sphere of low gravity. Useful for gaps and for carrying idols | General chaos |
+| Boom | Explosion at the landing point, damage in a small radius | General chaos |
+| Chaos | One of the six effects drawn on its faces | General chaos, unless a face says otherwise. The guide does not list the six |
+| Cocoon | After a delay, cocoons entities near the landing point. Players can struggle out | Same cocoon, with no delay |
+| Cube | A large cube you can push and climb. Only the shop’s Cube dispenser makes these | General chaos |
+| Echo | Radar pulse. Idols, players, and monsters show green through walls | General chaos |
+| Fire | After a delay, the landing area catches fire. Lights flammable objects and hurts some monsters | The same fire, immediately |
+| Firework | Fireworks bounce until they explode. Touching one deals 1 damage. Shop dispenser only | General chaos |
+| Freeze | Freezes whatever it hits for several seconds | Sets the ground on fire |
+| Heal | A circle that heals the living for 50 HP and revives the dead inside it at 10 HP | General chaos |
+| Lantern | A lamp you can carry or drop. Scroll wheel changes the color | General chaos |
+| Rally | Teleports every player to the landing point | General chaos |
+| Resurrect | Revives one random dead player, even from an earlier layout of the manor | Spawns a Player Mimic armed with dice. If you die while carrying a Resurrect die, it is used up and you revive |
+| Storm | Lightning after a delay. Hurts players and monsters and can ignite the floor | The same bolt, immediately |
+| Teleport | The thrower goes to the landing point | A minor monster, usually a Dress Mannequin or a Penguin |
+| Thread | A ball of thread rolls toward the game room. The guide singles this out for the final carry | General chaos |
+
+Plain dice from the game room are a separate mention. The guide says you can throw them through harmless snowmen. A comment says a blank die can bait the sandworm. This page does not know if those plain dice are the movement die, a stack of blanks, or both.
+
+Patch V0.44.7 says blessed dice no longer stayed highlighted yellow for dead players after a throw. So a “blessed” state exists. The patch does not say what the blessing does. V0.44.9 fixed a “gather-die teleport” on zone change. That phrase is not enough to add a Gather die to the table.
+
+## Curses on the movement die
+
+A purple curse face on top applies until the next movement phase. The guide lists three:
+
+| Curse | Effect while it lasts |
+| --- | --- |
+| Flashlight Disabled | Affected players cannot use the flashlight |
+| Reduced Maximum Health | Maximum health is capped at 20 |
+| Shared Damage & Healing | One player’s damage hits everyone. One player’s healing heals everyone |
+
+Near Death is an extra name from the 8 Oct 2026 patch, not from that curse list.
+
+## Selling a die you will not throw
+
+After a board, the shop has a DiceBurner. Drop a found die in. Dispenser dice cannot be burned.
+
+| Die | Payout in the guide |
+| --- | --- |
+| Most dice | $35 |
+| Boom, Thread | $70 |
+| Resurrect, Heal | $100 |
+
+Prices are community figures. A comment on 11 Oct 2026 is what pushed Resurrect to $100 in the guide. Re-read the burner if a patch touches the economy. V0.44.9 already fixed a negative-money bug.

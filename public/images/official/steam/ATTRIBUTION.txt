@@ -1,0 +1,52 @@
+Official Steam store assets for Invokyr (AppID 3883570).
+Self-hosted so the wiki does not hotlink the Steam CDN at page-view time.
+The bytes were downloaded from the Steam store CDN on 21 Oct 2026.
+Fan site: not affiliated with Ludogram, Shochiku, Valve, or Steam.
+Store page: https://store.steampowered.com/app/3883570/Invokyr/
+
+library-hero.jpg
+  Steam library hero, 1920x620
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3883570/f8e4e4e26e56348ed57bd1bff8e25f1994c51f4a/library_hero.jpg
+
+header.jpg
+  Classic store header, 460x215
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3883570/a1d37fb2bf0de54d1746d1aa4b83fb7ca81700d8/header.jpg?t=1792307731
+
+capsule-616x353.jpg
+  Store capsule, 616x353
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3883570/01f83e02e38a2162e84f8cf02645a425ea1e410e/capsule_616x353.jpg?t=1792307731
+
+Screenshots are the 600x338 store thumbnails from appdetails on 21 Oct 2026.
+Full-size 1920x1080 files exist at the same paths with .1920x1080.jpg.
+
+ss-00.jpg
+  Players at a candlelit table, one standing with a hand raised. Dice and a red six.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3883570/431a16b39f728e0db989db171e23607db8bbecf1/ss_431a16b39f728e0db989db171e23607db8bbecf1.600x338.jpg?t=1792307731
+
+ss-01.jpg
+  Close-up of a red six-sided die with pips.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3883570/343c53ef3c2d2fc26dbb22ec8ddd893d26f3ffe0/ss_343c53ef3c2d2fc26dbb22ec8ddd893d26f3ffe0.600x338.jpg?t=1792307731
+
+ss-02.jpg
+  Dim wood-paneled hall and a patterned rug.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3883570/ad9c2a4218ed3793b7e52c1e2a2fe4d10a0a39b0/ss_ad9c2a4218ed3793b7e52c1e2a2fe4d10a0a39b0.600x338.jpg?t=1792307731
+
+ss-03.jpg
+  First-person hand holding a die in a wood-paneled room, large die on the table.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3883570/0015a567807cec0f6ed83461f92f5c5277b5476d/ss_0015a567807cec0f6ed83461f92f5c5277b5476d.600x338.jpg?t=1792307731
+
+ss-04.jpg
+  Ornate dark room, tall windows, round table.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3883570/3c4b51d5f97f46fc7560ed000a176321c9723635/ss_3c4b51d5f97f46fc7560ed000a176321c9723635.600x338.jpg?t=1792307731
+
+ss-05.jpg
+  Flashlight in a narrow corridor, a second figure ahead.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3883570/e2688f084a311268222ce435f9d6e8ce2aadb95f/ss_e2688f084a311268222ce435f9d6e8ce2aadb95f.600x338.jpg?t=1792307731
+
+ss-06.jpg
+  Green die with an eye symbol on a dark carpet.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3883570/01c4a8f20fd6d68d54b9c154aae2f7090dd1a6b0/ss_01c4a8f20fd6d68d54b9c154aae2f7090dd1a6b0.600x338.jpg?t=1792307731
+
+ss-07.jpg
+  Stone passage, candles, red carpet.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3883570/b28d710fbb4c40688570539f1f087f2c8dd02af3/ss_b28d710fbb4c40688570539f1f087f2c8dd02af3.600x338.jpg?t=1792307731

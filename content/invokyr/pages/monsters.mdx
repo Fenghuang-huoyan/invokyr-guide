@@ -1,0 +1,71 @@
+---
+title: "Invokyr Monsters and Weaknesses"
+description: "Invokyr monster table for Early Access: damage, how each hunter works, and the dice the community guide lists as weaknesses. Disputed rows are marked."
+h1: "Monsters and weaknesses"
+section: "Threats"
+order: 2
+verifiedAgainst: "Eisenfang’s Steam guide, updated 19 Oct 2026, plus Ludogram patch notes through V0.44.13. Damage figures are community reports, not an official sheet."
+quickAnswer:
+  - "Ludogram’s launch post says Early Access has more than 15 monsters. Each board is built around one monster that spawns as the first event, according to the community guide."
+  - "Dress mannequins and the Shadow Man are listed as instant kills. The mannequin only moves when nobody is looking. The Shadow Man leaves if the active television is switched off."
+  - "Fire, Boom, and Cocoon dice are the weaknesses named most often. Knights are immune to damage and only care about Cocoon and Freeze."
+  - "The alligator’s relationship to fire is disputed in the guide comments. The Ice Miner has a spawn rhyme and no behavior write-up in that guide."
+sources:
+  - label: "Eisenfang — Invokyr Strategy Guide"
+    url: "https://steamcommunity.com/sharedfiles/filedetails/?id=3816039008"
+  - label: "Steam news — patch V0.44.13 and earlier"
+    url: "https://store.steampowered.com/news/app/3883570"
+related:
+  - href: "/dice"
+    label: "Dice"
+  - href: "/events"
+    label: "Events"
+  - href: "/co-op"
+    label: "Co-op"
+banner: "/images/official/steam/ss-05.jpg"
+bannerAlt: "Official Steam screenshot of a flashlight beam in a narrow dark corridor, with a second figure further ahead"
+---
+
+import Callout from '@framework/components/Callout.astro';
+
+The table below is Eisenfang’s monster list, rewritten. Attack numbers are that guide’s numbers. If a cell says “not listed,” the guide did not give one. Do not fill the blank from a different monster.
+
+![A flashlight in a corridor](/images/official/steam/ss-05.jpg)
+
+## Weakness table
+
+| Monster | What it does | Damage | Weakness in the guide |
+| --- | --- | --- | --- |
+| Alligator | Fast, aggressive, roams and attacks on sight | 60 | Boom, Cocoon. Fire is disputed. |
+| Carnivorous Plant | Starts asleep. Movement nearby wakes it | 60 | Do not sprint nearby. Fire, Boom |
+| Dress Mannequin | Moves only when no player is looking. Creaks. Mouth opens when activated | Instant death | Keep it in view. Fire, Boom, Cocoon |
+| Huntsman | Hears extremely well. Crouch-walking can still alert him | 70 | Fire, Boom, Cocoon |
+| Knights | White and black chess knights. Only one hunts at a time. The other rests | Not listed. Immune to damage | Cocoon, Freeze. You can walk past the resting one |
+| Mimic Door | Some doors bite when opened. Heavy breathing up close | Not listed | Listen before you open |
+| Money Man | Ignores you at a distance. Chases idols, and chases you if you hold one. Cane | Not listed | Fire, Boom, Cocoon. Drop what you are holding if you only need to pass |
+| Mummy | Long bandage and a wide sword with no vertical reach | 60 | Stand about two feet up, on a table or box. Fire, Boom, Cocoon. Crossing the bandage makes it sprint to that spot |
+| Penguin | Clockwork. Fuse starts when a player gets close. Can be picked up and thrown | Explosion 100 | Throw it into a pit or at something else. A throw knocks it down briefly |
+| Player Mimic | Copies a lobby player, repeats their proximity voice, sometimes throws dice | Not listed | Stay together. The spawn rhyme says a fake is among you |
+| Sandworm | Underground. Targets runners and loud players. Rumbles, then lunges | 70 | Not listed. A guide comment says a blank die can bait the lunge |
+| Shadow Man | Steps out of televisions that are showing static | Instant death | Turn the active television off. He despawns for a while |
+| Snowman | Many copies. One is aggressive. The rest pop if you throw an object through them or run into them | Not listed | Thrown objects, including plain game-room dice, for the harmless copies. Fire, Boom, Cocoon for the real one |
+| Spider | On the ceiling. Walking underneath cocoons you | Cocoon, not a health number | Look up. The 10 Aug 2026 demo post announced an arachnophobia option. This page has not re-checked that toggle in Early Access |
+| Yeti | Loud, fast, aggressive chase | Not listed | Fire, Boom, Cocoon. V0.44.11 fixed a yeti that could get stuck |
+| Ice Miner | Spawn rhyme only: a rope you have to break | Not listed | Not listed. Do not invent a counter from the rhyme |
+
+<Callout kind="warn" title="Alligator and fire">
+The guide’s weakness line for the alligator is Boom and Cocoon, not Fire. On 11 Oct 2026 a commenter wrote that fire killed an alligator after it was cocooned, and Eisenfang replied that fire immunity was something they had seen in the demo and might have changed. Until you test the current build, do not bet a life on fire working, and do not bet on it failing either.
+</Callout>
+
+## How a monster stays in the house
+
+Monster-spawn events are not a one-room fight. The guide says the creature remains for the rest of that game. Mimic doors spread through the manor. Spiders take ceilings. The Shadow Man comes with the televisions that wake him. Later rolls add threats. They do not clear the earlier ones.
+
+The first event of a board is guaranteed to be that board’s monster. The launch post does not publish which monster belongs to Haunted Manor, Jungle, Icy Mountain, or Desert. The only official pairing this site will repeat is the demo: on 10 Aug 2026 Ludogram’s Yeti Board was a frozen manor with the Yeti and “a second new creature.” Whether that board is the Early Access theme named Icy Mountain is not stated in the same post.
+
+## Patch notes that name a monster
+
+- **V0.44.11** (15 Oct 2026): yeti no longer gets stuck. A penguin that exploded while cocooned no longer leaves an empty cocoon.
+- **V0.44.13** (18 Oct 2026): a crash from the plant monster’s tentacles is fixed.
+
+Those lines confirm the plant, the yeti, and the penguin are in the Early Access build the studio is patching. They do not add new damage numbers.

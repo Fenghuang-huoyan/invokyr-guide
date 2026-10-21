@@ -1,0 +1,265 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@framework/layouts/BaseLayout.astro';
+import QuickAnswer from '@framework/components/QuickAnswer.astro';
+import AdSlot from '@framework/components/AdSlot.astro';
+import FaqList from '@framework/components/FaqList.astro';
+import { loadData } from '@framework/lib/content';
+import { siteConfig } from '@site/site.config';
+import { faqJsonLd, websiteJsonLd } from '@framework/lib/seo';
+
+const meta = loadData<{
+  release: string;
+  price: string;
+  priceNote: string;
+  players: string;
+  playersNote: string;
+  reviews: string;
+  reviewsNote: string;
+  boards: string;
+  boardsNote: string;
+  platforms: string;
+}>('meta');
+
+const faq = loadData<{ q: string; a: string; featured?: boolean }[]>('faq');
+const pages = (await getCollection('pages')).sort((a, b) => a.data.order - b.data.order);
+
+const art = {
+  header: '/images/official/steam/header.jpg',
+  table: '/images/official/steam/ss-00.jpg',
+  die: '/images/official/steam/ss-01.jpg',
+  hall: '/images/official/steam/ss-02.jpg',
+  hand: '/images/official/steam/ss-03.jpg',
+  windows: '/images/official/steam/ss-04.jpg',
+  corridor: '/images/official/steam/ss-05.jpg',
+  eye: '/images/official/steam/ss-06.jpg',
+  stone: '/images/official/steam/ss-07.jpg',
+  capsule: '/images/official/steam/capsule-616x353.jpg',
+};
+
+const guideArt: Record<string, string> = {
+  'beginner-guide': art.table,
+  monsters: art.corridor,
+  dice: art.die,
+  idols: art.eye,
+  items: art.hand,
+  boards: art.windows,
+  events: art.stone,
+  players: art.capsule,
+  'co-op': art.table,
+  achievements: art.header,
+  updates: art.hall,
+  secrets: art.stone,
+  faq: art.header,
+};
+
+const doors = [
+  {
+    href: '/beginner-guide',
+    num: '01',
+    title: 'First night',
+    text: 'The shared token, the idol count above the board, and what “beat the Gamemaster” means.',
+    image: art.table,
+  },
+  {
+    href: '/monsters',
+    num: '02',
+    title: 'Monsters',
+    text: 'Who kills on sight, who hates noise, and which weaknesses are still disputed.',
+    image: art.corridor,
+  },
+  {
+    href: '/dice',
+    num: '03',
+    title: 'Dice',
+    text: 'One-use dice from the house, the 5-in-6 rule of thumb, and the chaos face.',
+    image: art.die,
+  },
+  {
+    href: '/idols',
+    num: '04',
+    title: 'Idols',
+    text: 'Bronze through diamond, plus the soul you have to walk home.',
+    image: art.eye,
+  },
+  {
+    href: '/boards',
+    num: '05',
+    title: 'Boards',
+    text: 'The four launch themes, the Master Board, and Custom Mode after you win it.',
+    image: art.windows,
+  },
+  {
+    href: '/co-op',
+    num: '06',
+    title: 'Co-op',
+    text: 'Six seats, voice chat, mirrors, and what to do when someone is already dead.',
+    image: art.capsule,
+  },
+];
+
+const stills = [
+  { src: art.table, caption: 'The table' },
+  { src: art.die, caption: 'A red six' },
+  { src: art.hall, caption: 'The hall' },
+  { src: art.corridor, caption: 'The corridor' },
+  { src: art.hand, caption: 'A held die' },
+  { src: art.eye, caption: 'An eyed die' },
+  { src: art.windows, caption: 'The tall room' },
+  { src: art.stone, caption: 'The stone passage' },
+];
+---
+<BaseLayout
+  title={siteConfig.homeTitle}
+  description={siteConfig.homeDescription}
+  jsonLd={[
+    websiteJsonLd(),
+    faqJsonLd(faq.filter((item) => item.featured).map((item) => ({ q: item.q, a: item.a }))),
+  ]}
+>
+  <main id="content">
+    <div class="shell">
+      <p class="tape">
+        <span>Fan guide · not affiliated with Ludogram</span>
+        <span>Steam App {siteConfig.steamAppId}</span>
+        <span>{siteConfig.version.label}</span>
+      </p>
+
+      <section class="town-hero">
+        <img
+          class="hero-art"
+          src={siteConfig.art.hero}
+          alt={siteConfig.art.heroAlt}
+          width="1920"
+          height="620"
+          fetchpriority="high"
+          decoding="async"
+        />
+        <div class="hero-panel">
+          <p class="kicker">{siteConfig.developer} · {meta.price} on Steam · Early Access {meta.release}</p>
+          <h1>Roll the die. Leave the house.</h1>
+          <p class="lede">
+            A fan guide for <em>Invokyr</em>, the co-op horror board game.
+            Six players, one token, and a Gamemaster who keeps the rules.
+          </p>
+          <div class="cta-row">
+            <a class="btn" href="/beginner-guide">First night</a>
+            <a class="btn ghost" href="/monsters">Monsters</a>
+            <a class="btn ghost" href={siteConfig.steamUrl}>View on Steam</a>
+          </div>
+          <p class="version-note">{siteConfig.version.detail}</p>
+        </div>
+      </section>
+      <p class="art-credit">
+        Library hero, capsule, and screenshots are official Steam store assets for App {siteConfig.steamAppId}, saved from the store CDN. See the attribution file shipped with the images.
+      </p>
+
+      <section class="section">
+        <h2>Six doors</h2>
+        <p class="section-intro">
+          Open the page that matches the roll you just survived. The rest of the guide is the same table, written out.
+        </p>
+        <div class="door-grid">
+          {doors.map((door) => (
+            <a class="door" href={door.href}>
+              <span class="card-art">
+                <img src={door.image} alt="" width="600" height="338" decoding="async" />
+                <span class="num">{door.num}</span>
+              </span>
+              <span class="card-copy">
+                <h3>{door.title}</h3>
+                <p>{door.text}</p>
+              </span>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section class="section" aria-label="Official Steam screenshots">
+        <h2>The house, from the store page</h2>
+        <p class="section-intro">
+          Eight frames from the Steam screenshot set. They show the table, the dice, and the rooms. They are not a map.
+        </p>
+        <div class="still-row">
+          {stills.map((still) => (
+            <figure>
+              <img src={still.src} alt="" width="600" height="338" loading="lazy" decoding="async" />
+              <figcaption>{still.caption}</figcaption>
+            </figure>
+          ))}
+        </div>
+      </section>
+
+      <section class="stat-row" aria-label="Steam figures">
+        <div class="stat"><strong>{meta.price}</strong><span>{meta.priceNote}</span></div>
+        <div class="stat"><strong>{meta.reviews}</strong><span>{meta.reviewsNote}</span></div>
+        <div class="stat"><strong>{meta.players}</strong><span>{meta.playersNote}</span></div>
+        <div class="stat"><strong>{meta.boards}</strong><span>{meta.boardsNote}</span></div>
+      </section>
+
+      <section class="section home-quick">
+        <QuickAnswer
+          sentences={[
+            'Invokyr is Ludogram’s Early Access co-op horror game on Steam, published with Shochiku. You are trapped with a 1970s board game, and the Gamemaster makes you play.',
+            'The store loop is: find dice, roll them, survive what the roll summons, and reach the end. Online co-op supports up to six players, and single-player is listed too.',
+            'Launch content, in Ludogram’s own post, is four board themes, more than 15 monsters, more than 20 events, more than a dozen dice, cursed idols, House Rules, and a shop.',
+            'There is no character roster on the store page, and Steam had no achievement stats for this AppID on 21 Oct 2026. Numbers for damage and shop prices below are from a community guide and are marked that way.',
+          ]}
+        />
+        <AdSlot name="afterQuickAnswer" />
+      </section>
+
+      <section class="section">
+        <h2>The pages</h2>
+        <p class="section-intro">
+          English only. A figure from Eisenfang’s guide is labeled community. A figure from a Ludogram post is labeled official.
+        </p>
+        <div class="card-grid">
+          {pages.map((page) => (
+            <a class="guide-card" href={`/${page.id}`}>
+              <span class="card-art">
+                <img src={guideArt[page.id] ?? art.header} alt="" width="600" height="338" loading="lazy" decoding="async" />
+              </span>
+              <span class="card-copy">
+                <span class="section-tag">{page.data.section}</span>
+                <h3>{page.data.h1}</h3>
+                <p>{page.data.description}</p>
+              </span>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="scope">
+          <div>
+            <h2>What this wiki is for</h2>
+            <p>
+              The full event write-up lives in {siteConfig.databases.map((db, i) => (
+                <>
+                  <a href={db.href}>{db.label}</a>
+                  {i < siteConfig.databases.length - 1 ? ', ' : ''}
+                </>
+              ))}. This site is the skim: the first loop, the monster table, the dice, the shop, and the patches that already changed the rules.
+            </p>
+            <p>
+              Early Access is the point. Ludogram’s store FAQ says they expect about a year of it, with new themes, monsters, events, and items. If a price or a weakness looks old, the patch page is the first place to look.
+            </p>
+          </div>
+          <div>
+            <h2>In Steam’s words</h2>
+            <p>
+              {siteConfig.developer} shipped Invokyr on Steam on {meta.release}. The short description calls it a co-op survival horror game about a cursed board game. Platforms listed on the API: {meta.platforms}. Support mail on the store page is {siteConfig.supportEmail}.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section home-faq">
+        <h2>Short answers</h2>
+        <FaqList featuredOnly />
+        <p><a class="text-link" href="/faq">All FAQ</a></p>
+      </section>
+    </div>
+  </main>
+</BaseLayout>

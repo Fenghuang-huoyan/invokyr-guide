@@ -1,0 +1,42 @@
+[
+  {
+    "q": "Is Invokyr out?",
+    "a": "Yes, in Early Access. Ludogram released it on Steam on 8 October 2026. The store FAQ says they expect about a year of Early Access, and that the date can move.",
+    "featured": true
+  },
+  {
+    "q": "How many players?",
+    "a": "Steam lists single-player and online co-op, and the short description says a group of 6. One person can run the loop. A full table is six.",
+    "featured": true
+  },
+  {
+    "q": "Does it have classes or a character roster?",
+    "a": "No roster is listed on the Steam page. Everyone plays a person in the house. Personal differences come from shop upgrades and sweater colors, which the community shop list treats as per-player and per-save.",
+    "featured": true
+  },
+  {
+    "q": "Are there Steam achievements?",
+    "a": "Not as of 21 October 2026. The Steam community stats page for AppID 3883570 said no stats were available, and the store category list from the appdetails API did not include an achievements category.",
+    "featured": true
+  },
+  {
+    "q": "What does a run actually ask you to do?",
+    "a": "Roll the shared movement die in the game room, deal with the event, bring idols back to unlock the next roll, and repeat. When the token reaches the center, carry the Game Master’s soul idol back and seal it. Eisenfang’s guide also says the table then speaks “Invokyr” into the microphone. That spoken step is a community report, not a line in the launch post."
+  },
+  {
+    "q": "Why does Steam list Free To Play if the game costs money?",
+    "a": "The appdetails payload on 21 October 2026 includes Free To Play among the genres and also sets is_free to false, with a US price. The game is a paid Early Access title. The genre tag is metadata, not a free download."
+  },
+  {
+    "q": "When does the launch discount end?",
+    "a": "On 21 October 2026 the US store API still showed 25% off, $12.99 down to $9.74. SteamDB’s price history called it an introductory offer ending 22 October 2026. Check the store page before you buy. Ludogram has said the price can rise as content ships."
+  },
+  {
+    "q": "Is there a demo?",
+    "a": "There was one. Ludogram patched an Invokyr demo through the summer of 2026, including the Yeti Board on 10 August. This guide does not publish a demo AppID, because a guessed id did not resolve on the store API."
+  },
+  {
+    "q": "Where do the damage numbers come from?",
+    "a": "From Eisenfang’s Steam Community strategy guide, updated 19 October 2026. Ludogram has not posted an official monster spreadsheet. If your client disagrees, trust the tooltip and the rhyme on the board."
+  }
+]
