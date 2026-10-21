@@ -21,7 +21,7 @@ export const siteConfig = {
   homeDescription:
     'Unofficial English Invokyr wiki for Steam AppID 3883570. Early Access co-op horror board game by Ludogram: beginner loop, monsters, dice, idols, boards, shop, and patch notes. Community numbers are labeled.',
   analytics: {
-    gaId: '',
+    gaId: 'G-9T3GLR1VSH',
   },
   art: {
     hero: '/images/official/steam/library-hero.jpg',
