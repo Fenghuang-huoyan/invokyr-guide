@@ -13,4 +13,4 @@ This zone uses a full script URL. There is no `/invoke.js` suffix, and `invokeBa
 
 Adult and sensitive categories stay off.
 
-`analytics.gaId` in `sites/invokyrguide/site.config.ts` is empty, so pages do not load Google Analytics. There is no Google site-verification meta tag.
+`analytics.gaId` in `sites/invokyrguide/site.config.ts` is `G-9T3GLR1VSH`. The base layout loads that GA4 id with gtag on every page, including 404. There is no Google site-verification meta tag.

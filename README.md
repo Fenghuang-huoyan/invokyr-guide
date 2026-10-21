@@ -15,7 +15,7 @@ Not affiliated with Ludogram or Shochiku. The site is a short set of skimmable g
 | Content | `content/invokyr/` | Guide pages and JSON |
 | Routes | `src/pages/` | Home, guide slug, 404 |
 
-`analytics.gaId` is empty, so pages do not load Google Analytics. The homepage and guide pages load one Adsterra Native Banner after Quick Answer. The 404 page does not render a slot. See [ADS.md](ADS.md).
+`analytics.gaId` is `G-9T3GLR1VSH`, so every page loads that GA4 measurement id through gtag in the base layout. The homepage and guide pages also load one Adsterra Native Banner after Quick Answer. The 404 page does not render an ad slot. See [ADS.md](ADS.md).
 
 ## Scripts
 
