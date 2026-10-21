@@ -9,13 +9,13 @@ Not affiliated with Ludogram or Shochiku. The site is a short set of skimmable g
 | Layer | Path | Role |
 | --- | --- | --- |
 | Site config | `sites/invokyrguide/site.config.ts` | Domain, Steam AppID, analytics, nav |
-| Ads | `sites/invokyrguide/ads.config.ts` | Adsterra slot after Quick Answer, still a placeholder |
+| Ads | `sites/invokyrguide/ads.config.ts` | Adsterra Native Banner after Quick Answer |
 | Active site | `sites/active` → `invokyrguide` | What the build actually reads |
 | Framework | `framework/` | Layout, Quick Answer, ad slot, SEO |
 | Content | `content/invokyr/` | Guide pages and JSON |
 | Routes | `src/pages/` | Home, guide slug, 404 |
 
-`analytics.gaId` is empty, so pages do not load Google Analytics. The only ad slot is `afterQuickAnswer`, and its id still starts with `ADSTERRA_`, so no ad script loads. The 404 page does not render a slot. See [ADS.md](ADS.md).
+`analytics.gaId` is empty, so pages do not load Google Analytics. The homepage and guide pages load one Adsterra Native Banner after Quick Answer. The 404 page does not render a slot. See [ADS.md](ADS.md).
 
 ## Scripts
 

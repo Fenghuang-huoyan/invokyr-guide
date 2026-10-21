@@ -1,11 +1,13 @@
 /**
  * Adsterra Native Banner, directly after Quick Answer on the homepage and guide pages.
  *
- * Only this slot exists. Its id stays on the ADSTERRA_ prefix and scriptSrc is
- * empty, so resolveAdPlacement marks it inactive and no ad script is requested.
- * Fill id with the zone key Adsterra issues for invokyrguide.wiki, and set
- * scriptSrc to that zone's full script URL, when a placement should go live.
- * The 404 page does not render a slot.
+ * This zone's invoke URL has no `/invoke.js` suffix. Set `scriptSrc` to the
+ * full script URL Adsterra issued for this site. Do not paste a key or host
+ * from another game.
+ *
+ * When `scriptSrc` is empty, the fallback is still `${invokeBase}/${id}/invoke.js`.
+ * Adult and sensitive categories stay off. Only afterQuickAnswer exists, so the
+ * script is emitted once per homepage and guide page. The 404 page does not render a slot.
  */
 export type AdSlotConfig = {
   id: string;
@@ -18,9 +20,9 @@ export type AdSlotConfig = {
 
 const slots = {
   afterQuickAnswer: {
-    id: 'ADSTERRA_AFTER_QUICK_ANSWER',
+    id: 'a9afaed3d79743b4a3f6dc4a0a2677c9',
     format: 'native-banner',
-    scriptSrc: '',
+    scriptSrc: 'https://bauval.org/21/a9afaed3d79743b4a3f6dc4a0a2677c9',
   },
 } as const satisfies Record<string, AdSlotConfig>;
 
