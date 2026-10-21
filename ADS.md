@@ -1,15 +1,16 @@
 # Adsterra — invokyrguide.wiki
 
-The Native Banner slot is wired for the homepage and guide pages, immediately after Quick Answer (`afterQuickAnswer` in `sites/invokyrguide/ads.config.ts`). The 404 page does not include a slot. There is no sidebar slot and no footer slot.
+Native Banner is wired for the homepage and guide pages, immediately after Quick Answer (`afterQuickAnswer` in `sites/invokyrguide/ads.config.ts`). The script is rendered once on those pages. The 404 page does not include the slot.
 
-Nothing loads yet.
+This zone uses a full script URL. There is no `/invoke.js` suffix, and `invokeBase` stays empty so the old host is not hardcoded.
 
 | Field | Value | Used in the script? |
 | --- | --- | --- |
-| Zone key | `ADSTERRA_AFTER_QUICK_ANSWER` | No. The `ADSTERRA_` prefix keeps the placement inactive |
-| Script src | empty | No |
-| Invoke base | empty | No |
+| Zone key | `a9afaed3d79743b4a3f6dc4a0a2677c9` | Yes. `afterQuickAnswer.id`, and the container id `container-a9afaed3d79743b4a3f6dc4a0a2677c9` |
+| Script src | `https://bauval.org/21/a9afaed3d79743b4a3f6dc4a0a2677c9` | Yes. Full `afterQuickAnswer.scriptSrc` |
+| Website ID | `6139248` | No. Ops note only |
+| Placement ID | `31845874` | No. Ops note only |
 
-When Adsterra issues a zone for this domain, replace the id with that zone key and set `scriptSrc` to the full script URL they give you. Adult and sensitive categories stay off.
+Adult and sensitive categories stay off.
 
 `analytics.gaId` in `sites/invokyrguide/site.config.ts` is empty, so pages do not load Google Analytics. There is no Google site-verification meta tag.
